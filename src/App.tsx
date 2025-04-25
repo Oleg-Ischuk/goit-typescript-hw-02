@@ -81,7 +81,7 @@ function App() {
           imageUrl={selectedImage ? selectedImage.urls.regular : ""}
           alt={selectedImage ? selectedImage.alt_description : ""}
         />
-        {loading && <Loader />}
+        {loading && <Loader size={60} />}
         {gallery.length > 0 && !loading && page < totalPages && (
           <LoadMoreBtn onClick={() => setPage((prevPage) => prevPage + 1)} />
         )}
